@@ -121,6 +121,7 @@ public class HomeController {
 
 	@RequestMapping(value = "tab", params = {"email", "company"}, method = {RequestMethod.POST, RequestMethod.GET})
 	public @ResponseBody VoucherToReturn tab(@RequestParam(value = "email") String email, @RequestParam(value = "company") String company_name) {
+		System.out.println("In Tab");
 		VoucherToReturn voucherToReturn = new VoucherToReturn();
 
 		int newCustomerId = 0;
